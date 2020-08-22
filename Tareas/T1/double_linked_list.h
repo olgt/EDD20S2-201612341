@@ -1,28 +1,30 @@
-#ifndef LINKEDLIST_H
-#define LINKEDLIST_H
-#include "Nodo_estudiante.h"
+#ifndef DOUBLE_LINKED_LIST_H
+#define DOUBLE_LINKED_LIST_H
+
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "Nodo_estudiante.h"
 
 using namespace std;
 
-class LinkedList
+
+class Double_Linked_List
 {
 public:
-    LinkedList();
+    Double_Linked_List();
 
-    void deleteNode(int id);
     void addNode(Nodo_Estudiante *nuevo);
+    void deleteNode(int id);
     void searchNode(int id);
     int getSize();
-    void printLinkedList();
+    void printList();
     void createImage();
+
+    void printOptionsInsert();
     void printOptionsDelete();
     void printOptionsSearch();
-    void printOptionsInsert();
-    LinkedList* copyList();
-    Nodo_Estudiante *gethead();
+
 
 private:
     Nodo_Estudiante *head;
@@ -30,4 +32,4 @@ private:
     int size;
 };
 
-#endif // LINKEDLIST_H
+#endif // DOUBLE_LINKED_LIST_H

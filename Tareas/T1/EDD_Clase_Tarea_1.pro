@@ -15,10 +15,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        Menu_Delete.cpp \
-        Menu_Insert.cpp \
-        Menu_Search.cpp \
         Nodo_estudiante.cpp \
+        double_linked_list.cpp \
+        doublecircularlinkedlist.cpp \
         linkedlist.cpp \
         main.cpp
 
@@ -28,9 +27,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    Menu_Delete.h \
-    Menu_Insert.h \
-    Menu_Search.h \
     Nodo_estudiante.h \
     Utilities.h \
+    double_linked_list.h \
+    doublecircularlinkedlist.h \
     linkedlist.h

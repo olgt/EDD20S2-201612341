@@ -11,8 +11,16 @@ Nodo_Estudiante* Nodo_Estudiante::getSiguiente(){
     return this->siguiente;
 }
 
+Nodo_Estudiante* Nodo_Estudiante::getAnterior(){
+    return this->anterior;
+}
+
 void Nodo_Estudiante::setSiguiente(Nodo_Estudiante *n){
     this->siguiente = n;
+}
+
+void Nodo_Estudiante::setAnterior(Nodo_Estudiante *n){
+    this->anterior = n;
 }
 
 int Nodo_Estudiante::getId(){

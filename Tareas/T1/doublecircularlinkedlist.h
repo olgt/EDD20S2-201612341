@@ -1,33 +1,37 @@
-#ifndef LINKEDLIST_H
-#define LINKEDLIST_H
-#include "Nodo_estudiante.h"
+#ifndef DOUBLECIRCULARLINKEDLIST_H
+#define DOUBLECIRCULARLINKEDLIST_H
+
+
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "Nodo_estudiante.h"
 
 using namespace std;
 
-class LinkedList
+
+class DoubleCircularLinkedList
 {
 public:
-    LinkedList();
+    DoubleCircularLinkedList();
 
-    void deleteNode(int id);
     void addNode(Nodo_Estudiante *nuevo);
+    void deleteNode(int id);
     void searchNode(int id);
     int getSize();
-    void printLinkedList();
+    void printList();
     void createImage();
+
+    void printOptionsInsert();
     void printOptionsDelete();
     void printOptionsSearch();
-    void printOptionsInsert();
-    LinkedList* copyList();
-    Nodo_Estudiante *gethead();
+
 
 private:
     Nodo_Estudiante *head;
     Nodo_Estudiante *tail;
     int size;
+
 };
 
-#endif // LINKEDLIST_H
+#endif // DOUBLECIRCULARLINKEDLIST_H
