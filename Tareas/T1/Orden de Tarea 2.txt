@@ -1,0 +1,13 @@
+LinkedList* LinkedList::copyList(){
+    LinkedList *newList = new LinkedList(); //constante
+
+    Nodo_Estudiante *actual = this->gethead(); //Constante
+
+    while(actual != NULL){ //bucle
+        newList->addNode(actual); //Otro metodo (1)
+        actual = actual->getSiguiente(); //Variable de control (n+1)
+    }
+    cout << "Lista Copiada: "; //constante
+    newList->printLinkedList(); //Otro metodo (n+1)
+    return newList; //Constante
+}
